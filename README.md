@@ -31,10 +31,10 @@ erDiagram
         FungiID uint FK
         RegionID uint FK
     }
-    REGIONS }o--o{ FUNGUS-LOCATIONS: is
-    REGIONS{
+    LOCATIONS }o--o{ FUNGUS-LOCATIONS: is
+    LOCATIONS{
         ID uint PK
-        Location string
+        Region string
         Descripton string
     }
 ```
@@ -52,6 +52,10 @@ erDiagram
 4. pip install tabulate
 ```
 
+## Dependencies
+- mysql-connector-python
+- tabulate
+
 ## Usage 
 To run python menu
 ``` python
@@ -65,7 +69,9 @@ To make docker container and create database
 
 3. docker exec -it Wacky-little-my-structured-query-language-final-project-for-one-of-the-various-classes-I-go-to-durin mysql -uroot -p<password> < schema.sql
 ```
+
 ## Example Usage
+
 
 
 
