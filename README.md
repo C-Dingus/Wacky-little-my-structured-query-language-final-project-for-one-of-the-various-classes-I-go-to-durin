@@ -66,16 +66,12 @@ To make docker container and create database
 3. docker exec -it Wacky-little-my-structured-query-language-final-project-for-one-of-the-various-classes-I-go-to-durin mysql -uroot -p<password> < schema.sql
 ```
 
-## Example Usage
-
-
-
 
 ## Testing
 
 To add example data and see example queries
 ``` bash
-1. docker exec -it dnd-database mysql -uroot -ppassword < data.sql
+1. docker exec -it Wacky-little-my-structured-query-language-final-project-for-one-of-the-various-classes-I-go-to-durin mysql -uroot -p<password> < data.sql
 
-2. docker exec -it dnd-database mysql -uroot -ppassword < queries.sql
+2. docker exec -it Wacky-little-my-structured-query-language-final-project-for-one-of-the-various-classes-I-go-to-durin mysql -uroot -p<password> < queries.sql
 ```
