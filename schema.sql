@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `fungus_locations` (
   PRIMARY KEY (`id`),
   KEY `fungus_id` (`fungus_id`),
   KEY `location_id` (`location_id`),
-  CONSTRAINT `fungus_locations_ibfk_1` FOREIGN KEY (`fungus_id`) REFERENCES `fungi` (`id`),
-  CONSTRAINT `fungus_locations_ibfk_2` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`)
+  CONSTRAINT `fungus_locations_ibfk_1` FOREIGN KEY (`fungus_id`) REFERENCES `fungi` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fungus_locations_ibfk_2` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `present_toxins` (
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `present_toxins` (
   PRIMARY KEY (`id`),
   KEY `fungus_id` (`fungus_id`),
   KEY `mycotoxin_id` (`mycotoxin_id`),
-  CONSTRAINT `present_toxins_ibfk_1` FOREIGN KEY (`fungus_id`) REFERENCES `fungi` (`id`),
-  CONSTRAINT `present_toxins_ibfk_2` FOREIGN KEY (`mycotoxin_id`) REFERENCES `mycotoxins` (`id`)
+  CONSTRAINT `present_toxins_ibfk_1` FOREIGN KEY (`fungus_id`) REFERENCES `fungi` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `present_toxins_ibfk_2` FOREIGN KEY (`mycotoxin_id`) REFERENCES `mycotoxins` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `lookalikes` (
