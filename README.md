@@ -46,10 +46,6 @@ erDiagram
 1. git clone https://github.com/C-Dingus/Wacky-little-my-structured-query-language-final-project-for-one-of-the-various-classes-I-go-to-durin.git
 
 2. cd Wacky-little-my-structured-query-language-final-project-for-one-of-the-various-classes-I-go-to-durin
-
-3. pip install mysql-connector-python
-
-4. pip install tabulate
 ```
 
 ## Dependencies
